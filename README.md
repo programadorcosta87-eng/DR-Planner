@@ -2,7 +2,6 @@
 
 Aplicativo de controle financeiro pessoal para gerenciar receitas e despesas.
 
-🔗 Acesse o projeto: https://dr-planner.netlify.app/
 
 ---
 
