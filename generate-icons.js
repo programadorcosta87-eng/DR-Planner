@@ -10,31 +10,32 @@ const svgIcon = `
 `;
 
 // Save SVG
-fs.writeFileSync('public/icon.svg', svgIcon.trim());
+fs.mkdirSync('public/images', { recursive: true });
+fs.writeFileSync('public/images/icon.svg', svgIcon.trim());
 
 // Generate PNGs
 async function generate() {
   await sharp(Buffer.from(svgIcon.trim()))
     .resize(192, 192)
     .png()
-    .toFile('public/pwa-192x192.png');
+    .toFile('public/images/pwa-192x192.png');
     
   await sharp(Buffer.from(svgIcon.trim()))
     .resize(512, 512)
     .png()
-    .toFile('public/pwa-512x512.png');
+    .toFile('public/images/pwa-512x512.png');
 
   // Maskable
   await sharp(Buffer.from(svgIcon.trim()))
     .resize(512, 512)
     .png()
-    .toFile('public/pwa-maskable-512x512.png');
+    .toFile('public/images/pwa-maskable-512x512.png');
 
   // Apple touch icon (180x180)
   await sharp(Buffer.from(svgIcon.trim()))
     .resize(180, 180)
     .png()
-    .toFile('public/apple-touch-icon.png');
+    .toFile('public/images/apple-touch-icon.png');
 }
 
 generate().catch(console.error);
