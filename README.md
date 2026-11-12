@@ -32,14 +32,15 @@ Um dos principais objetivos do projeto é permitir que o usuário tenha controle
 
 ## 🛠️ Tecnologias
 
-* HTML5
-* CSS3
-* JavaScript
-* React
 * TypeScript
+* React 19
 * Vite
-* Recharts
-* Progressive Web App (PWA)
+* Tailwind CSS 4
+* Recharts — gráficos financeiros
+* date-fns — manipulação de datas
+* vite-plugin-pwa / Progressive Web App (PWA)
+* Lucide React e Motion — interface e animações
+* JavaScript para recursos auxiliares
 
 ---
 
